@@ -1,0 +1,14 @@
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    
+    border: 2px #CCCCCC solid;
+    border-radius: 24px;
+
+    padding: 5px 50px;
+
+    max-width: 33vw;
+}

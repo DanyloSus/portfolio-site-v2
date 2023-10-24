@@ -1,0 +1,12 @@
+.repoBlock {
+    min-width: 320px;
+    min-height: 50px;
+
+    border: 2px #CCCCCC solid;
+    border-radius: 8px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

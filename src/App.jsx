@@ -1,7 +1,7 @@
-const App = () => {
-  return (
-    <h1>App</h1>
-  )
-}
+import Portfolio from "./Pages/Portfolio";
 
-export default App
+const App = () => {
+  return <Portfolio />;
+};
+
+export default App;
