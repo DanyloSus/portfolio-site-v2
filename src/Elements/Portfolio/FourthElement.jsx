@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 import Section from "./Section";
 
 import "./FourthElement.css";
+import Load from "../Load";
+import useReveal from "../../Hooks/useReveal";
 
-const FourthElement = () => {
+const FourthElement = forwardRef(function FourthElement(props, ref) {
+  const [isLoading, setIsLoading] = useState(true);
   const [repData, setRepData] = useState([]);
 
   // const getData = () => {
@@ -16,8 +19,12 @@ const FourthElement = () => {
     const response = await fetch(
       "https://api.github.com/users/DanyloSus/repos?per_page=1000&sort=stars"
     );
+
     const data = await response.json();
     setRepData(data);
+
+    setIsLoading(false);
+    useReveal();
   };
 
   useEffect(() => {
@@ -28,22 +35,22 @@ const FourthElement = () => {
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
     .map((repo) => {
       return (
-        <div className="repoBlock" key={repo.name}>
-          <a href={repo.clone_url}>{repo.name}</a>
-        </div>
+        <a href={repo.clone_url} key={repo.name} className="reveal bottom">
+          <div className="repoBlock">
+            <h3>{repo.name}</h3>
+          </div>
+        </a>
       );
     });
 
-  console.log(repData);
-
   return (
-    <Section isWrap isScroll>
+    <Section isWrap isScroll ref={ref}>
       <h1>
         My repositories on <a href="https://github.com/DanyloSus">GitHub</a>
       </h1>
-      {repoElements}
+      {isLoading ? <Load /> : repoElements}
     </Section>
   );
-};
+});
 
 export default FourthElement;

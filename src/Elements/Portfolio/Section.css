@@ -7,16 +7,22 @@
     align-items: center;
 }
 
+.section:nth-child(0) {
+    margin-top: 64px;
+}
+
 .content {
-    min-height: calc(100vh - 48px);
+    min-height: calc(100vh - 64px);
     width: 100vw;
     max-width: 1024px;
 
     margin: 0px 50px;
-    padding: 50px 0;
+    padding: 100px 25px;
     
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+
+    overflow: hidden;
 }

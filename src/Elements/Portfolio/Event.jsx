@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from "react";
 import "./Event.css";
 
 const Event = (props) => {
   return (
     <div
-      className="event"
+      className="event reveal bottom"
       style={{
         alignSelf:
           (props.position % 4 === 1 && "flex-start") ||

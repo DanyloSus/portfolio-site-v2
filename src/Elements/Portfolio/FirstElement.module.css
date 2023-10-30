@@ -1,0 +1,28 @@
+.reactLogo {
+    height: 250px;
+
+    animation: rotateLogo 30s linear infinite;
+
+    cursor: pointer;
+}
+
+.reactLogo:hover{
+    filter: drop-shadow(0px 0px 100px var(--react-color));
+}
+
+.firstElement {
+    margin-top: 64px;
+}
+
+@keyframes rotateLogo {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+h1 {
+    margin-bottom: 12px;
+}

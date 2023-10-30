@@ -1,15 +1,18 @@
 import Section from "./Section";
-import "./FirstElement.css";
+import classes from "./FirstElement.module.css";
+import { forwardRef } from "react";
 
-const FirstElement = () => {
+const FirstElement = forwardRef(function FirstElement(props, ref) {
   return (
-    <Section className="">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-        alt="React Logo"
-        className="reactLogo"
-      />
-      <div>
+    <Section className={classes.firstElement} ref={ref}>
+      <a href="https://legacy.reactjs.org/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          alt="React Logo"
+          className={`${classes.reactLogo} reveal leftright`}
+        />
+      </a>
+      <div className="reveal leftright">
         <h1>React Front-End Developer</h1>
         <p>
           Experienced React Front-End developer with deep understanding of
@@ -21,6 +24,6 @@ const FirstElement = () => {
       </div>
     </Section>
   );
-};
+});
 
 export default FirstElement;

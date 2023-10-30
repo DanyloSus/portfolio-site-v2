@@ -1,13 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import "./SecondElement.css";
+
+import { forwardRef } from "react";
 
 import Section from "./Section";
 
-const SecondElement = () => {
+const SecondElement = forwardRef(function FirstElement(props, ref) {
   return (
-    <Section>
-      <div>
+    <Section ref={ref}>
+      <div className="reveal leftright">
         <h1>Hi!</h1>
         <p>I am Danylo Sushko. I am Ukrainian and I live in Odesa.</p>
         <p>
@@ -28,9 +28,13 @@ const SecondElement = () => {
           <a href="https://www.efset.org/cert/UFJfLz">B1</a>
         </p>
       </div>
-      <img src="./me.png" alt="Danylo Sushko Photo" className="meImg" />
+      <img
+        src="./me.png"
+        alt="Danylo Sushko Photo"
+        className="meImg reveal leftright"
+      />
     </Section>
   );
-};
+});
 
 export default SecondElement;

@@ -1,12 +1,31 @@
 .repoBlock {
-    min-width: 320px;
     min-height: 50px;
 
-    border: 2px #CCCCCC solid;
+    border: 2px var(--border) solid;
     border-radius: 8px;
-    padding: 5px;
+    padding: 5px 30px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.repoBlock h3 {
+    color: var(--react-color);
+
+    transition: color 0.3s ease-in-out;
+}
+
+.repoBlock:hover {
+    background-color: var(--hover-react-color);
+
+    border-color: var(--react-color);
+}
+
+.repoBlock:hover h3 {
+    color: var(--white);
 }

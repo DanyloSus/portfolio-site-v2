@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import "./Section.css";
 
-const Section = (props) => {
+const Section = forwardRef(function Section(props, ref) {
   return (
-    <section className="section">
+    <section className={`section ${props.className || ""}`} ref={ref}>
       <div
         className="content"
         style={{
@@ -15,6 +16,6 @@ const Section = (props) => {
       <hr />
     </section>
   );
-};
+});
 
 export default Section;

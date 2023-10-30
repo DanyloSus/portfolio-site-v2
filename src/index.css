@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
   background-color: #FFFFFF;
 
   color: #333333;
 
   font-family: 'Roboto', sans-serif;
+
+  --react-color: #5ED3F3;
+  --hover-react-color: #3CB1D1;
+  --white: #FFFFFF;
+  --text: #333333;
+  --border: #CCCCCC;
 }
 
-html, body {
+body {
   overflow-x: hidden;
 }
 
@@ -17,31 +21,10 @@ html, body {
   margin: 0;
 
   box-sizing: border-box;
-
-  text-align: justify;
 }
 
-h1 {
-  text-align: justify;
-  font-size: 36px;
-}
-
-h2 {
-  text-align: justify;
-  font-size: 30px;
-}
-
-p {
-  font-size: 18px;
-
-  text-indent: 1.2em;
-}
-
-hr {
-  border: 2px #CCCCCC solid;
-  width: 100vw;
-}
-
-a {
-  color: #5ED3F3;
+button {
+  border: none;
+  
+  background-color: transparent;
 }

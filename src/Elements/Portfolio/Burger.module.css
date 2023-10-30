@@ -1,0 +1,14 @@
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger div {
+    width: 32px;
+    height: 4px;
+
+    background-color: var(--border);
+
+    border-radius: 8px;
+}

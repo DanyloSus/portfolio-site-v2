@@ -1,7 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .portfolio {
     width: 100vw;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
+}
+
+.portfolio h1 {
+  font-size: 36px;
+}
+
+.portfolio h2 {
+  font-size: 30px;
+}
+
+.portfolio h3 {
+  font-size: 24px;
+}
+
+.portfolio h4 {
+  font-size: 20px;
+}
+
+.portfolio p, .portfolio span {
+  font-size: 18px;
+}
+
+.portfolio p {
+  text-indent: 1.2em;
+  text-align: justify;
+}
+
+.portfolio hr {
+  border: 2px var(--border) solid;
+  width: 100vw;
+}
+
+.portfolio a {
+  color: var(--react-color);
+
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio a:hover {
+  color: var(--hover-react-color);
+}
+
+.portfolio button {
+  border: none;
+  
+  background-color: transparent;
+}
+
+.portfolio .reveal.bottom {
+  transform: translateY(150px);
+
+  opacity: 0;
+
+  transition: 1s all ease-in-out;
+  z-index: 0;
+}
+
+.portfolio .reveal.bottom.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio .reveal.leftright {
+  transform: translateX(-150px);
+
+  opacity: 0;
+
+  transition: 1s all ease-in-out;
+  z-index: 0;
+}
+
+.portfolio .reveal.leftright:nth-child(2n) {
+  transform: translateX(150px);
+
+  opacity: 0;
+
+  transition: 1s all ease-in-out;
+  z-index: 0;
+}
+
+.portfolio .reveal.leftright.active {
+  transform: translateX(0);
+  opacity: 1;
 }

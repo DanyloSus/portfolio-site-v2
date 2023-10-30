@@ -2,11 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     flex: 1;
     
-    border: 2px #CCCCCC solid;
+    border: 2px var(--border) solid;
     border-radius: 24px;
+
+    background-color: var(--white);
 
     padding: 5px 50px;
 

@@ -1,7 +1,7 @@
 import Event from "./Event";
 import "./ThirdElement.css";
 import Section from "./Section";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 
 const eventContent = [
   { title: "Birth", date: "20.05.2005" },
@@ -19,7 +19,7 @@ const eventContent = [
   { title: "To Be Continue..." },
 ];
 
-const ThirdElement = () => {
+const ThirdElement = forwardRef(function FirstElement(props, ref) {
   const [position, setPosition] = useState(1);
 
   const eventElements = eventContent.map((event, index) => {
@@ -34,11 +34,11 @@ const ThirdElement = () => {
   });
 
   return (
-    <Section isColumn>
+    <Section isColumn ref={ref}>
       <h1>How I became a programmer</h1>
       {eventElements}
     </Section>
   );
-};
+});
 
 export default ThirdElement;
