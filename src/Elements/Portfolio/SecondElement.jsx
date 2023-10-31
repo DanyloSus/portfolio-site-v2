@@ -8,8 +8,10 @@ const SecondElement = forwardRef(function FirstElement(props, ref) {
   return (
     <Section ref={ref}>
       <div className="reveal leftright">
-        <h1>Hi!</h1>
-        <p>I am Danylo Sushko. I am Ukrainian and I live in Odesa.</p>
+        <h1>About Me</h1>
+        <p>
+          <b>Hi!</b> I am Danylo Sushko. I am Ukrainian and I live in Odesa.
+        </p>
         <p>
           I have one year of experience with React and in that time I have
           created more than 50 projects. I know how to work with: Redux,

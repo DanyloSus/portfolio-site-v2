@@ -70,7 +70,7 @@ const PortfolioElement = () => {
         : refs.fourthRef;
     ref.current.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: refId === "ref1" ? "end" : "start",
       inline: "nearest",
     });
   };

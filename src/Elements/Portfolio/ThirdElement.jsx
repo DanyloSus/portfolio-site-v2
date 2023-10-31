@@ -34,7 +34,7 @@ const ThirdElement = forwardRef(function FirstElement(props, ref) {
   });
 
   return (
-    <Section isColumn ref={ref}>
+    <Section className="column" ref={ref}>
       <h1>How I became a programmer</h1>
       {eventElements}
     </Section>

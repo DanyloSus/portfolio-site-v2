@@ -3,14 +3,16 @@ import Portfolio from "./Pages/Portfolio";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
+  // create router
   {
-    path: "/",
+    path: "/", // main path is Portfolio page
     element: <Portfolio />,
   },
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  // create App element
+  return <RouterProvider router={router} />; // return Router provider with the router
 };
 
-export default App;
+export default App; // return

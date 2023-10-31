@@ -21,9 +21,9 @@
 }
 
 .repoBlock:hover {
-    background-color: var(--hover-react-color);
+    background-color: var(--react-color);
 
-    border-color: var(--react-color);
+    border-color: var(--hover-react-color);
 }
 
 .repoBlock:hover h3 {

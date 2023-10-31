@@ -8,7 +8,6 @@ const Section = forwardRef(function Section(props, ref) {
         className="content"
         style={{
           flexWrap: props.isWrap ? "wrap" : "nowrap",
-          flexDirection: props.isColumn ? "column" : "row",
         }}
       >
         {props.children}

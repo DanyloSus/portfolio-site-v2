@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
 .section:nth-child(0) {
@@ -21,8 +23,22 @@
     
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     gap: 24px;
+}
 
-    overflow: hidden;
+.column .content {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    .content{
+        flex-direction: column;
+        overflow-x: hidden;
+}
+
+    .section:nth-child(2) .content{
+        flex-direction: column-reverse;
+    }
 }

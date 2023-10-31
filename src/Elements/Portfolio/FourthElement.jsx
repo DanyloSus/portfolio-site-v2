@@ -45,7 +45,7 @@ const FourthElement = forwardRef(function FourthElement(props, ref) {
 
   return (
     <Section isWrap isScroll ref={ref}>
-      <h1>
+      <h1 style={{ textAlign: "center" }}>
         My repositories on <a href="https://github.com/DanyloSus">GitHub</a>
       </h1>
       {isLoading ? <Load /> : repoElements}
