@@ -5,6 +5,7 @@ import { forwardRef } from "react";
 import Section from "./Section";
 
 const SecondElement = forwardRef(function FirstElement(props, ref) {
+  // create an element of short information which take ref
   return (
     <Section ref={ref}>
       <div className="reveal leftright">

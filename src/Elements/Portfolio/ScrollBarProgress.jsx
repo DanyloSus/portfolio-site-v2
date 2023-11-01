@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from "react";
 
 const ScrollBarProgress = () => {
-  const [scrollTop, setScrollTop] = useState(0);
+  // create progress bar of scroll
+  const [scrollTop, setScrollTop] = useState(0); // create a state which takes a percent of scroll
 
   const onScroll = () => {
-    const winScroll = document.documentElement.scrollTop;
+    // create function which update the past state
+    const winScroll = document.documentElement.scrollTop; // create the top position of the scroll
     const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+      document.documentElement.scrollHeight - // take height of the page
+      document.documentElement.clientHeight; // subtract height of the visible content
 
-    const scrolled = (winScroll / height) * 100;
+    const scrolled = (winScroll / height) * 100; // calculate the persentage
 
-    setScrollTop(scrolled);
+    setScrollTop(scrolled); // set a scroll percent
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll); // add to a scroll a scroll function which calculate percent of scrolled
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", onScroll); // clean up
     };
   }, []);
 

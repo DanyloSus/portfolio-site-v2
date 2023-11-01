@@ -3,6 +3,7 @@ import classes from "./FirstElement.module.css";
 import { forwardRef } from "react";
 
 const FirstElement = forwardRef(function FirstElement(props, ref) {
+  // create an element which take and push to section ref
   return (
     <Section className={classes.firstElement} ref={ref}>
       <a href="https://legacy.reactjs.org/" target="_blank">

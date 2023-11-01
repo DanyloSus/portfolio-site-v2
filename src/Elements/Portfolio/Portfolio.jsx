@@ -15,17 +15,19 @@ import useReveal from "../../Hooks/useReveal";
 
 const PortfolioElement = () => {
   const refs = {
+    // create object of refs of elements
     firstRef: useRef(null),
     secondRef: useRef(null),
     thirdRef: useRef(null),
     fourthRef: useRef(null),
   };
 
-  const [activeSection, setActiveSection] = useState("ref1");
+  const [activeSection, setActiveSection] = useState("ref1"); // create a state of visible section
 
   useEffect(() => {
     const handleScroll = () => {
       const rects = {
+        // create an object of positions of sections
         firstRect: refs.firstRef.current.getBoundingClientRect(),
         secondRect: refs.secondRef.current.getBoundingClientRect(),
         thirdRect: refs.thirdRef.current.getBoundingClientRect(),
@@ -33,6 +35,7 @@ const PortfolioElement = () => {
       };
 
       setActiveSection(
+        // set an active section
         rects.fourthRect.top <= 64
           ? "ref4"
           : rects.thirdRect.top <= 64
@@ -43,24 +46,25 @@ const PortfolioElement = () => {
       );
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll); // add to a scroll a function which calculate which section is active
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll); // clean up
     };
   }, [refs]);
 
   useEffect(() => {
-    window.addEventListener("scroll", useReveal);
+    window.addEventListener("scroll", useReveal); // add to a scroll a reveal function
 
-    useReveal();
+    useReveal(); // use a reveal function on start of project
 
     return () => {
-      window.removeEventListener("scroll", useReveal);
+      window.removeEventListener("scroll", useReveal); // clean up
     };
   }, []);
 
   const scrollToRef = (refId) => {
-    const ref =
+    // function which scroll to the section with the ref
+    const ref = // get a section by a ref
       refId === "ref1"
         ? refs.firstRef
         : refId === "ref2"
@@ -69,8 +73,9 @@ const PortfolioElement = () => {
         ? refs.thirdRef
         : refs.fourthRef;
     ref.current.scrollIntoView({
-      behavior: "smooth",
-      block: refId === "ref1" ? "end" : "start",
+      // scroll to the section by ref
+      behavior: "smooth", // scroll is smooth
+      block: refId === "ref1" ? "end" : "start", // if section first then scroll to the end of the section. if another than to the start
       inline: "nearest",
     });
   };

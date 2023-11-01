@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Event.css";
 
 const Event = (props) => {
+  // create an event element
   return (
     <div
       className="event reveal bottom"

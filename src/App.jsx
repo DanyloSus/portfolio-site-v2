@@ -3,7 +3,7 @@ import Portfolio from "./Pages/Portfolio";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
-  // create router
+  // create router (I thought make more than one site)
   {
     path: "/", // main path is Portfolio page
     element: <Portfolio />,

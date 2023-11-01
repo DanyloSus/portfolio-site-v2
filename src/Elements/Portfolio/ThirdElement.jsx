@@ -1,9 +1,10 @@
 import Event from "./Event";
 import "./ThirdElement.css";
 import Section from "./Section";
-import { useState, forwardRef } from "react";
+import { forwardRef } from "react";
 
 const eventContent = [
+  // an array of the events
   { title: "Birth", date: "20.05.2005" },
   { title: "Appear of my computer", date: "2008" },
   { title: "Children IT Step", date: "05.09.2015-2019" },
@@ -20,9 +21,9 @@ const eventContent = [
 ];
 
 const ThirdElement = forwardRef(function FirstElement(props, ref) {
-  const [position, setPosition] = useState(1);
-
+  // create element which gets ref
   const eventElements = eventContent.map((event, index) => {
+    // create elements of events from the array
     return (
       <Event
         title={event.title}

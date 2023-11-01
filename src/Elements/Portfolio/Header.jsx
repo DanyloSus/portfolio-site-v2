@@ -6,9 +6,10 @@ import { createPortal } from "react-dom";
 import ScrollBarProgress from "./ScrollBarProgress";
 
 const Header = (props) => {
-  const headerRoot = document.getElementById("header");
+  const headerRoot = document.getElementById("header"); // get header root
 
   return createPortal(
+    // create portal of header
     <header className={`${classes.header} ${props.className}`}>
       <nav>
         <div>
