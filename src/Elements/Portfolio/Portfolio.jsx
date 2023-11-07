@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import BurgerContextProvider from "../../Contexts/BurgerContext";
 
 import useReveal from "../../Hooks/useReveal";
+import Footer from "../Footer";
 
 const PortfolioElement = () => {
   const refs = {
@@ -82,17 +83,18 @@ const PortfolioElement = () => {
 
   return (
     <BurgerContextProvider>
+      <Header
+        burger={<Burger />}
+        scrollToRef={scrollToRef}
+        activeSection={activeSection}
+      />
       <main className="portfolio">
-        <Header
-          burger={<Burger />}
-          scrollToRef={scrollToRef}
-          activeSection={activeSection}
-        />
         <FirstElement ref={refs.firstRef} />
         <SecondElement ref={refs.secondRef} />
         <ThirdElement ref={refs.thirdRef} />
         <FourthElement ref={refs.fourthRef} />
       </main>
+      <Footer />
     </BurgerContextProvider>
   );
 };
