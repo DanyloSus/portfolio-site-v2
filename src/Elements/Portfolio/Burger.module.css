@@ -1,14 +1,28 @@
 .burger {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: none;
+
+  flex-direction: column;
+  gap: 4px;
 }
 
 .burger div {
-    width: 32px;
-    height: 4px;
+  position: relative;
 
-    background-color: var(--border);
+  top: 0px;
+  bottom: 0px;
 
-    border-radius: 8px;
+  width: 32px;
+  height: 4px;
+
+  background-color: var(--border);
+
+  border-radius: 8px;
+
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .burger {
+    display: flex;
+  }
 }
