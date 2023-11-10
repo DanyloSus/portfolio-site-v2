@@ -11,7 +11,6 @@ const eventContent = [
   { title: "First HTML CSS project", date: "03.03.2018" },
   { title: "First JS project", date: "2019" },
   { title: "First Olympiad", date: "2021" },
-  { title: "First Cookie Clicker", date: "31.12.2021" },
   { title: "Second Olympiad", date: "2022" },
   { title: "First React Project", date: "17.11.2022" },
   { title: "Third Olympiad", date: "2023" },
